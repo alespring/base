@@ -1,21 +1,153 @@
 #include <stdlib.h>
 #include  <avr/io.h>
 
-#define LED1_AUS PORTD &= ~(1<<PD1); //löscht PD1
-#define LED1_AUS PORTD ¦= (1<<PD1); //letzt PD1
+#define F_CPU 8000000UL
+#include <util/delay.h>
+
+#define LED1_AUS PORTD &= ~(1<<PD0); //löscht PD1
+#define LED1_EIN PORTD |= (1<<PD0); //letzt PD1
+
+#define LED2_AUS PORTD &= ~(1<<PD1); //löscht PD2
+#define LED2_EIN PORTD |= (1<<PD1); //letzt PD2
+
+#define LED3_AUS PORTD &= ~(1<<PD2); //löscht PD3
+#define LED3_EIN PORTD |= (1<<PD2); //letzt PD3
+
+#define LED4_AUS PORTD &= ~(1<<PD3); //löscht PD4
+#define LED4_EIN PORTD |= (1<<PD3); //letzt PD4
+
+#define LED5_AUS PORTD &= ~(1<<PD4); //löscht PD5
+#define LED5_EIN PORTD |= (1<<PD4); //letzt PD5
+
+#define LED6_AUS PORTD &= ~(1<<PD5); //löscht PD6
+#define LED6_EIN PORTD |= (1<<PD5); //letzt PD6
+
+#define LED7_AUS PORTD &= ~(1<<PD6); //löscht PD7
+#define LED7_EIN PORTD |= (1<<PD6); //letzt PD7
+
+#define LED8_AUS PORTD &= ~(1<<PD7); //löscht PD8
+#define LED8_EIN PORTD |= (1<<PD7); //letzt PD8
+
 
 int main(void)
 {
-	DDRD = 0xFF; // Port D als Ausgang setzen
-	PORTD = 0xFF;//alle Pins an Port D auf high setzen
+	DDRD = 0xFF; // alle Port_D auf Ausgang setzen
+	PORTD = 0xFF; // alle Port_D auf HIGH gesetzt
 	
-	 LED1_AUS;
+	
+long x;
+	
+	
+	/*
+	LED1_EIN;	// LED_1 eingeschaltet
+	for(x=0;x<100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED1_AUS; // LED_1 ausgeschaltet
+	for(x=0;x<100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	 
+	 
+	LED2_EIN;
+	for(x=0;x>100000;x++);
+	LED2_AUS;
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED3_EIN;	// LED_3 eingeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED3_AUS; // LED_3 ausgeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED4_EIN;	// LED_4 eingeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED4_AUS; // LED_4 ausgeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED5_EIN;	// LED_5 eingeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED5_AUS; // LED_5 ausgeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED6_EIN;	// LED_6 eingeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED6_AUS; // LED_6 ausgeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED7_EIN;	// LED_7 eingeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED7_AUS; // LED_7 ausgeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED8_EIN;	// LED_8 eingeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED8_AUS; // LED_8 ausgeschaltet
+	for(x=0;x>100000;x++); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	*/
+	 
+	 
+	 
+	 
 	  
 	while(1)
 	{
-      
-	  
-	  
+      LED1_EIN;	// LED_1 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED1_AUS; // LED_1 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED2_EIN;	// LED_2 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED2_AUS; // LED_2 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird$
+	
+	
+	LED3_EIN;	// LED_3 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED3_AUS; // LED_3 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED4_EIN;	// LED_4 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED4_AUS; // LED_4 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED5_EIN;	// LED_5 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED5_AUS; // LED_5 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED6_EIN;	// LED_6 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED6_AUS; // LED_6 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED7_EIN;	// LED_7 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED7_AUS; // LED_7 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED8_EIN;	// LED_8 eingeschaltet
+	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED8_AUS; // LED_8 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	 
 
 	}// end of while
