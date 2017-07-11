@@ -28,14 +28,34 @@
 #define LED8_AUS PORTD &= ~(1<<PD7); //löscht PD8
 #define LED8_EIN PORTD |= (1<<PD7); //letzt PD8
 
+#define TASTER1 !(PINB&(1<<PB1))
 
 int main(void)
 {
 	DDRD = 0xFF; // alle Port_D auf Ausgang setzen
 	PORTD = 0xFF; // alle Port_D auf HIGH gesetzt
 	
+	DDRB &= ~(1<<PB1);
+	PORTB |=(1<<PB1);
 	
-long x;
+	while(1)
+   {
+	
+		while(TASTER1)
+		{
+		
+			LED1_AUS;
+			LED2_AUS;
+			LED3_AUS;
+			LED4_AUS;
+			LED5_AUS;
+			LED6_AUS;
+			LED7_AUS;
+			LED8_AUS;
+		
+		}
+	
+
 	
 	
 	/*
@@ -89,65 +109,161 @@ long x;
 	*/
 	 
 	 
-	 
+	
 	 
 	  
-	while(1)
-	{
+	
       LED1_EIN;	// LED_1 eingeschaltet
-	 // PORTD = 0B10000000;
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	LED1_AUS; // LED_1 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	
 	
-	LED2_EIN;	// LED_2 eingeschaltet
-	 // PORTD = 0B10000000;
-	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
-	LED2_AUS; // LED_2 ausgeschaltet
-	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird$
-	
-	
-	LED3_EIN;	// LED_3 eingeschaltet
-	 // PORTD = 0B10000000;
+	LED3_EIN;	// LED_3 eingeschaltet;
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	LED3_AUS; // LED_3 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	
 	
-	LED4_EIN;	// LED_4 eingeschaltet
-	 // PORTD = 0B10000000;
+	LED2_EIN;	// LED_2 eingeschaltet;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED2_AUS; // LED_2 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird$
+	
+	
+	LED4_EIN;	// LED_4 eingeschaltet;
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	LED4_AUS; // LED_4 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	
 	
+	LED3_EIN;	// LED_3 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED3_AUS; // LED_3 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
 	LED5_EIN;	// LED_5 eingeschaltet
-	 // PORTD = 0B10000000;
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	LED5_AUS; // LED_5 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	
 	
+	LED4_EIN;	// LED_4 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED4_AUS; // LED_4 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
 	LED6_EIN;	// LED_6 eingeschaltet
-	 // PORTD = 0B10000000;
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED6_AUS; // LED_6 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED5_EIN;	// LED_5 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED5_AUS; // LED_5 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED7_EIN;	// LED_7 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED7_AUS; // LED_7 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED6_EIN;	// LED_6 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED6_AUS; // LED_6 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED8_EIN;	// LED_8 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED8_AUS; // LED_8 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED8_EIN;	// LED_8 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED8_AUS; // LED_8 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED6_EIN;	// LED_6 eingeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	LED6_AUS; // LED_6 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	
 	
 	LED7_EIN;	// LED_7 eingeschaltet
-	 // PORTD = 0B10000000;
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	LED7_AUS; // LED_7 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
 	
 	
-	LED8_EIN;	// LED_8 eingeschaltet
-	 // PORTD = 0B10000000;
+	LED5_EIN;	// LED_5 eingeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
-	LED8_AUS; // LED_8 ausgeschaltet
+	LED5_AUS; // LED_5 ausgeschaltet
 	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED6_EIN;	// LED_6 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED6_AUS; // LED_6 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED4_EIN;	// LED_4 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED4_AUS; // LED_4 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED5_EIN;	// LED_5 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED5_AUS; // LED_5 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED3_EIN;	// LED_3 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED3_AUS; // LED_3 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED4_EIN;	// LED_4 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED4_AUS; // LED_4 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED2_EIN;	// LED_2 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED2_AUS; // LED_2 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED3_EIN;	// LED_3 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED3_AUS; // LED_3 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	LED1_EIN;	// LED_1 eingeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	LED1_AUS; // LED_1 ausgeschaltet
+	_delay_ms(100); // Pause eingefügt bis nächster Befehl erkannt wird
+	
+	
+	
+	
+	
+
+	
+	
+	
 	 
 
 	}// end of while
