@@ -269,7 +269,7 @@ int resultat = 0;
 				
 				else
 				{
-					resultat = 0;
+					resultat = 0;        // die verschiedenen Falle für die jeweiligen taster und die wenns dazu
 				}
 				
 				break;
@@ -288,7 +288,7 @@ int resultat = 0;
 				break;
 	}
 
-return resultat;
+return resultat; // resultat soll wiederholt werden
 
 
 
@@ -342,12 +342,12 @@ return resultat;
 	
  	  	while(1) 
     { 
-		if(taster(2))
-		{cd AVR
+		if(taster(2))//taster2 wird angesprochen
+		{
 		
 		
-			led(2,1);
-		}else led(2,0);
+			led(2,1); //die Led mit dem zustand angeben falls schalter  gedrückt
+		}else led(2,0);//die Led mit dem zustand angeben falls schalter nicht gedrückt
 		
  
  	}// end of while 
